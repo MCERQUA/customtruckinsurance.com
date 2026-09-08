@@ -26,7 +26,10 @@ export default function ContactPage() {
     setSubmitting(true);
     setError("");
     try {
-      await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ form_name: "contact", source: SITE.domain, ...formData }) });
+      const res = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ form_name: "contact", source: SITE.domain, ...formData }) });
+      // fetch() resolves on a 4xx/5xx, so the catch below never fired and a failed
+      // submission rendered the success state. Make the existing error path work.
+      if (!res.ok) throw new Error(String(res.status));
       setSubmitted(true);
     } catch {
       setError(COPY.contact.errorMessage);
