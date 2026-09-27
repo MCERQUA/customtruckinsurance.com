@@ -3,18 +3,18 @@ export const SITE = {
   domain: "customtruckinsurance.com",
   url: "https://customtruckinsurance.com",
   phone: "844-967-5247",
-  email: "info@customtruckinsurance.com",
+  email: "josh@contractorschoiceagency.com",
   npn: "8608479",
   legalName: "Contractors Choice Agency, LLC",
   phoneHref: "tel:+18449675247",
-  hours: "Mon–Fri 8 am–6 pm CT",
+  hours: "Mon–Fri 8 am–6 pm (Arizona time)",
   description:
     "Specialized insurance for custom and modified trucks — lifted builds, aftermarket upgrades, agreed value coverage, and custom parts protection. Licensed all 50 states. 15-minute quotes.",
   address: {
-    street: "2415 E Camelback Rd, Suite 700",
-    city: "Phoenix",
+    street: "12220 E Riggs Rd, Suite #104",
+    city: "Chandler",
     state: "AZ",
-    zip: "85016",
+    zip: "85249",
     country: "US",
   },
 };
